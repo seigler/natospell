@@ -3,17 +3,24 @@
   var words, inputElement, outputElement;
 
   function translate(input) {
-    var i, length, output, key, a = 'a'.charCodeAt(0), z = 'z'.charCodeAt(0);
+    var i, length, output, key, numKey, a = 'a'.charCodeAt(0), zero = '0'.charCodeAt(0); 
     input = input.toLowerCase();
     output = "";
     length = input.length;
     for (i = 0; i < length; i += 1) {
       key = input.charCodeAt(i) - a;
+      numKey = input.charCodeAt(i) - zero;
       if (key >= 0 && key <= 26) {
         if (i > 0) {
           output += " ";
         }
         output += words[key];
+      }
+      else if(numKey >= 0 && numKey <= 10){
+        if (i > 0) {
+          output += " ";
+        }
+        output += numKey.toString();
       }
     }
     return output;
