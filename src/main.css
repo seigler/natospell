@@ -1,0 +1,36 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: calc(1vw + 1em);
+  background-color: tan;
+}
+
+header, main {
+  margin: 0 auto;
+  width: 30em;
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 0.5em;
+}
+
+input[type="text"] {
+  width: 100%;
+  font-size: inherit;
+  padding: 0.25em;
+}
